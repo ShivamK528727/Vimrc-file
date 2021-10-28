@@ -1,8 +1,11 @@
 syntax on
 set nu
 set splitbelow splitright 
+set laststatus=2
 set clipboard=unnamed
 let mapleader= ","
+set guioptions -=m "Hides the menubar
+set guioptions -=T "Hides the Toolbar
 
 " Mapping to reload configuration
 nmap<leader>so :source $HOME\_vimrc<CR>
@@ -24,7 +27,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim'
-" Make sure you use single quotes
+
+Plug 'itchyny/lightline.vim'
 " Shorthand notation; retches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
