@@ -1,4 +1,5 @@
 syntax on
+set nu
 set splitbelow splitright 
 set clipboard=unnamed
 let mapleader= ","
@@ -22,10 +23,7 @@ endif
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-"Colorschmee-tender
 Plug 'dracula/vim'
-
-color dracula
 " Make sure you use single quotes
 " Shorthand notation; retches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -42,3 +40,5 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Initialize plugin system
 call plug#end()
+
+colorscheme dracula
