@@ -1,5 +1,6 @@
 syntax on
 set nu
+set noshowmode
 set splitbelow splitright 
 set laststatus=2
 set clipboard=unnamed
@@ -20,6 +21,9 @@ if has("gui_running")
   endif
 endif
 
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
