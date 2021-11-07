@@ -11,6 +11,11 @@ set guioptions -=T "Hides the Toolbar
 " Mapping to reload configuration
 nmap<leader>so :source $HOME\_vimrc<CR>
 
+map <F11> <Esc>:call libcallnr("gvimfullscreen_64.dll", "ToggleFullScreen", 0)<CR>
+
+map <silent><F11>:call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
+"gvimfullscreen_64.dll or without "_64" for 32-bit file needs to be copied from link to folder where gvim.exe is,(according to version 32-bit or 64-bit "https://www.vim.org/scripts/script.php?script_id=2596""
+
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -39,8 +44,6 @@ Plug 'junegunn/vim-easy-align'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-"Plugin for fullscreen 
-Plug 'https://github.com/szw/vim-maximizer.git'
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
