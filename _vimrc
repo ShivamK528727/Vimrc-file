@@ -7,6 +7,8 @@ set clipboard=unnamed
 let mapleader= ","
 set guioptions -=m "Hides the menubar
 set guioptions -=T "Hides the Toolbar
+set guioptions -=r  "remove right-hand scroll bar
+set guioptions -=L  "remove left-hand scroll bar
 
 " Mapping to reload configuration
 nmap<leader>so :source $HOME\_vimrc<CR>
@@ -37,6 +39,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim'
 
+
 Plug 'itchyny/lightline.vim'
 " Shorthand notation; retches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -51,6 +54,8 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
+"Plugin to add Icons (https://github.com/ryanoasis/vim-devicons)
+Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
