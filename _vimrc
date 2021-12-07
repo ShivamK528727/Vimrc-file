@@ -39,6 +39,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim'
 
+"Material theme (https://github.com/kaicataldo/material.vim)
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 Plug 'itchyny/lightline.vim'
 " Shorthand notation; retches https://github.com/junegunn/vim-easy-align
